@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversa</title>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="./js/client.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="message right">Me: Hello, How r u?</div>
+      <div class="message left">Prachi: Hi, I joined right now</div>
+    </div>
+
+    <div class="send">
+      <form action="#" id="send-container">
+        <input type="text" id="messageInp" name="messageInp" required />
+        <button class="button" type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
