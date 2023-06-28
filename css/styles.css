@@ -6,7 +6,7 @@ body {
   max-width: 850px;
   background-color: aqua;
   margin: auto;
-  min-height: 80vh;
+  max-height: 80vh;
   overflow-y: auto;
   scroll-behavior: smooth;
   margin-bottom: 20px;
