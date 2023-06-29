@@ -68,7 +68,7 @@ app.post('/signup',async(req, res) => {
 app.post('/login',async(req, res) => {
     try{
         const check = await UserLogin.findOne({name:req.body.name});
-        if(check.password===req.body.password){
+        if(check.password==req.body.password){
             res.render('home');
         }
         else{
@@ -77,5 +77,14 @@ app.post('/login',async(req, res) => {
     }
     catch{
         console.log('Wrong Credintials');
+    }
+});
+
+app.post('/home',(req, res) => {
+    try{
+        res.render('index');
+    }
+    catch{
+        console.log('Error');
     }
 });

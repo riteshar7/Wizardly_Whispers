@@ -6,6 +6,17 @@
     <title>Home Page</title>
   </head>
   <body>
-    <h1>This is Home Page</h1>
+    <div class="room-control">
+      <form action="/home" method="POST">
+        <label for="room">Room:</label>
+        <select name="room" id="room">
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Hufflepuf">Hufflepuf</option>
+        </select>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
   </body>
 </html>
