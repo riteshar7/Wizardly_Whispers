@@ -19,23 +19,25 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
-const users = {};
+// const users = {};
+const rooms = {};
 
 io.on('connection', (socket) => {
-    socket.on('new-user-joined', (name) => {
+    socket.on('new-user-joined', (name, room) => {
         console.log(name,'joined');
-        users[socket.id] = name;
-        socket.broadcast.emit('user-joined', name);
-        console.log(users);
+        socket.join(room);
+        rooms[room].users[socket.id] = name;
+        console.log(rooms);
+        socket.broadcast.to(room).emit('user-joined', name);
     });
-    socket.on('send', (message) => {
-        socket.broadcast.emit('receive', {message: message, name: users[socket.id]});
+    socket.on('send', (message, room) => {
+        socket.broadcast.to(room).emit('receive', {message: message, name: rooms[room].users[socket.id]});
     });
 
-    socket.on('disconnect', (message) => {
-        socket.broadcast.emit('leave', users[socket.id]);
-        delete users[socket.id];
-    });
+    // socket.on('disconnect', (message) => {
+    //     socket.broadcast.emit('leave', rooms[room].users[socket.id]);
+    //     delete rooms[room].users[socket.id];
+    // });
 });
 
 app.get('/signup',(req, res) => {
@@ -50,7 +52,11 @@ app.get('/login',(req, res) => {
     res.redirect('/');
 })
 
-app.post('/signup',async(req, res) => {
+app.get('/:id', (req, res) => {
+    res.render('index',{room: req.params.id});
+})
+
+app.post('/signup', async(req, res) => {
     // const data = {
     //     name: req.body.name,
     //     password: req.body.password
@@ -69,7 +75,11 @@ app.post('/signup',async(req, res) => {
         // const data = new UserLogin(req.body);
         await UserLogin.insertMany([data])
             .then((result) => {
-                res.render('index');
+                // res.render('index');
+                if(!rooms[data.house]){
+                    rooms[data.house] = { users:{} };
+                }
+                res.redirect(data.house);
             })
             .catch((err) => {
                 console.log(err);
@@ -81,7 +91,13 @@ app.post('/login',async(req, res) => {
     try{
         const check = await UserLogin.findOne({name:req.body.name});
         if(check.password==req.body.password){
-            res.render('index');
+            // res.render('index',{house: req.body.house});
+            const house = check.house;
+            if(!rooms[house]) {
+                rooms[house] = { users:{} };
+            }
+            // console.log(house);
+            res.redirect(house);
         }
         else{
             console.log('Wrong Password');
@@ -91,12 +107,3 @@ app.post('/login',async(req, res) => {
         console.log('Wrong Credintials');
     }
 });
-
-// app.post('/home',(req, res) => {
-//     try{
-//         res.render('index');
-//     }
-//     catch{
-//         console.log('Error');
-//     }
-// });

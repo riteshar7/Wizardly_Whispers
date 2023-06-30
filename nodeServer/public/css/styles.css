@@ -2,20 +2,45 @@ body {
   background-color: rgb(163, 83, 239);
 }
 
+.app-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 80%;
+  margin: auto;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.house-info {
+  flex: 30%;
+  background-color: darkgreen;
+  border-right: 3px solid black;
+}
+
+.housename {
+  text-align: center;
+}
+
+.chatbox {
+  flex: 70%;
+  background-color: rgb(3, 126, 3);
+}
+
 .container {
-  max-width: 850px;
-  background-color: aqua;
+  /* max-width: 850px; */
+  /* background-color: aqua; */
   margin: auto;
   height: 80vh;
   overflow-y: auto;
   scroll-behavior: smooth;
   margin-bottom: 20px;
-  border: 2px solid black;
-  border-radius: 4px;
+  /* border: 2px solid black; */
+  /* border-radius: 4px; */
 }
 
 .message {
-  background-color: rgb(11, 103, 14);
+  background-color: rgb(218, 163, 12);
   width: max-content;
   margin: 8px 12px;
   padding: 5px;
@@ -34,18 +59,19 @@ body {
 }
 
 #send-container {
-  display: block;
-  margin: auto;
-  max-width: 850px;
-  width: 100%;
-  text-align: center;
+  display: flex;
+  /* margin: auto; */
+  /* max-width: 850px; */
+  /* width: 100%; */
+  /* text-align: center; */
 }
 
 #messageInp {
-  width: 93%;
+  /* width: 93%; */
   height: 30px;
   border: 2px solid black;
   border-radius: 5px;
+  flex: 90%;
 }
 
 .button {
@@ -53,5 +79,6 @@ body {
   border-radius: 3px;
   cursor: pointer;
   height: 35px;
+  flex: 10%;
   background-color: rgb(11, 103, 14);
 }
