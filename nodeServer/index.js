@@ -51,26 +51,37 @@ app.get('/login',(req, res) => {
 })
 
 app.post('/signup',async(req, res) => {
-    const data = new UserLogin(req.body);
     // const data = {
     //     name: req.body.name,
     //     password: req.body.password
     // }
     // UserLogin.insertMany([data]);
-    await data.save()
-        .then((result) => {
-            res.render('home');
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+    const check = await UserLogin.findOne({name:req.body.name});
+    if(check){
+        res.send('<h3 align= "center">Error!! Username Already Exists</h3>');
+    }
+    else{
+        const data = {
+            name: req.body.name,
+            password: req.body.password,
+            house: req.body.house,
+        }
+        // const data = new UserLogin(req.body);
+        await UserLogin.insertMany([data])
+            .then((result) => {
+                res.render('index');
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
 });
 
 app.post('/login',async(req, res) => {
     try{
         const check = await UserLogin.findOne({name:req.body.name});
         if(check.password==req.body.password){
-            res.render('home');
+            res.render('index');
         }
         else{
             console.log('Wrong Password');
@@ -81,11 +92,11 @@ app.post('/login',async(req, res) => {
     }
 });
 
-app.post('/home',(req, res) => {
-    try{
-        res.render('index');
-    }
-    catch{
-        console.log('Error');
-    }
-});
+// app.post('/home',(req, res) => {
+//     try{
+//         res.render('index');
+//     }
+//     catch{
+//         console.log('Error');
+//     }
+// });

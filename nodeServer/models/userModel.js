@@ -18,6 +18,10 @@ const userSchema = new Schema({
         type:String,
         required:true,
     },
+    house:{
+        type:String,
+        required:true,
+    }
 },{timestamps:true});
 
 const UserLogin =mongoose.model('User',userSchema);

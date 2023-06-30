@@ -8,8 +8,24 @@
   <body>
     <h2>Sign Up</h2>
     <form action="/signup" method="POST">
-      <input type="text" name="name" placeholder="Name" required />
+      <label for="name">Username:</label>
+      <input type="text" name="name" placeholder="Username" required />
+      <label for="password">Password:</label>
       <input type="password" name="password" placeholder="Password" required />
+      <label for="conf_password">Confirm Password:</label>
+      <input
+        type="password"
+        name="conf_password"
+        placeholder="Confirm Password"
+        required
+      />
+      <label for="house">House:</label>
+      <select name="house" id="house">
+        <option value="Gryffindor">Gryffindor</option>
+        <option value="Slytherin">Slytherin</option>
+        <option value="Ravenclaw">Ravenclaw</option>
+        <option value="Hufflepuf">Hufflepuf</option>
+      </select>
       <button type="submit">Submit</button>
     </form>
 
