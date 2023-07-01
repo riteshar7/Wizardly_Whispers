@@ -7,23 +7,25 @@
     <link rel="stylesheet" href="/css/pages.css" />
   </head>
   <body>
-    <div class="form">
-      <div class="login">
-        <h2>Login</h2>
+    <div class="container">
+      <div class="form">
+        <div class="login">
+          <h2>Login</h2>
 
-        <form action="/login" method="POST">
-          <div class="details">
-            <label for="name">Username:</label>
-            <input type="text" name="name" placeholder="Username" />
-          </div>
-          <div class="details">
-            <label for="password">Password:</label>
-            <input type="password" name="password" placeholder="Password" />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+          <form action="/login" method="POST">
+            <div class="details">
+              <label for="name">Username:</label>
+              <input type="text" name="name" placeholder="Username" />
+            </div>
+            <div class="details">
+              <label for="password">Password:</label>
+              <input type="password" name="password" placeholder="Password" />
+            </div>
+            <button type="submit">Submit</button>
+          </form>
 
-        <a href="/signup">Don't have an account? Sign Up first.</a>
+          <a href="/signup">Don't have an account? Sign Up first.</a>
+        </div>
       </div>
     </div>
   </body>

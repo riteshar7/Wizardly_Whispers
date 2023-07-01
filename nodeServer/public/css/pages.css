@@ -2,7 +2,10 @@ body{
     background-image: url('/image/wallpaperflare.com_wallpaper.jpg');
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
+    width: 100%;
 }
+
+/* -------------------------------- Link -------------------------------- */
 
 a:link, a:visited{
     color:rgb(103, 77, 43);
@@ -17,16 +20,23 @@ a:hover, a:active{
 a{
     font-weight: 600;
     position: relative;
-    bottom: -120px;
+    bottom: -130px;
     text-decoration: none;
 }
 
-h2{
-    margin: 50px;
+/* -------------------------------- Card -------------------------------- */
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .login{
-    height: 360px;
+    height: 370px;
 }
 
 .signup{
@@ -36,11 +46,17 @@ h2{
 .form {
     position: fixed;
     background: rgba(224,215,186, 0.6);
-    top: 120px;
-    left : 35%;
+    top: 20vh;
     border-radius: 10px;
     width: 350px;
     text-align: center;
+    min-width: fit-content;
+}
+
+/* -------------------------------- Elements -------------------------------- */
+
+h2{
+    margin: 50px;
 }
 
 .details{
@@ -48,7 +64,42 @@ h2{
     margin: 20px;
 }
 
+/* -------------------------------- Button -------------------------------- */
+
 button{
     position: relative;
     bottom: -100px;
+    border: 0px;
+    border-radius: 2px;
+    width: 100px;
+    height: 25px;
+    background-color: rgb(223, 196, 163);
+    box-shadow: 2px 2px 5px rgba(156, 109, 48, 0.8);
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    transition: 100ms;
+    box-shadow: 0px 0px;
+}
+
+/* -------------------------------- Responsive -------------------------------- */
+
+@media screen  and (max-width: 400px){
+    a{
+        bottom: -100px;
+    }
+
+    .signup{
+        height: 420px;
+    }
+
+    .form{
+        top: 15vh;
+        left: 0px;
+        width: 100%;
+    }
 }
