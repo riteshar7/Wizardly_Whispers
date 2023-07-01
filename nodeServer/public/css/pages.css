@@ -1,0 +1,54 @@
+body{
+    background-image: url('/image/wallpaperflare.com_wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+a:link, a:visited{
+    color:rgb(103, 77, 43);
+}
+
+
+a:hover, a:active{
+    /* color: rgb(18,51,164); */
+    color: rgb(14,31,140);
+}
+
+a{
+    font-weight: 600;
+    position: relative;
+    bottom: -120px;
+    text-decoration: none;
+}
+
+h2{
+    margin: 50px;
+}
+
+.login{
+    height: 360px;
+}
+
+.signup{
+    height: 420px;
+}
+
+.form {
+    position: fixed;
+    background: rgba(224,215,186, 0.6);
+    top: 120px;
+    left : 35%;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+}
+
+.details{
+    position: relative;
+    margin: 20px;
+}
+
+button{
+    position: relative;
+    bottom: -100px;
+}

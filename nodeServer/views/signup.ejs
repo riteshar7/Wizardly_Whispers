@@ -4,31 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/pages.css" />
   </head>
   <body>
-    <h2>Sign Up</h2>
-    <form action="/signup" method="POST">
-      <label for="name">Username:</label>
-      <input type="text" name="name" placeholder="Username" required />
-      <label for="password">Password:</label>
-      <input type="password" name="password" placeholder="Password" required />
-      <label for="conf_password">Confirm Password:</label>
-      <input
-        type="password"
-        name="conf_password"
-        placeholder="Confirm Password"
-        required
-      />
-      <label for="house">House:</label>
-      <select name="house" id="house">
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Slytherin">Slytherin</option>
-        <option value="Ravenclaw">Ravenclaw</option>
-        <option value="Hufflepuf">Hufflepuf</option>
-      </select>
-      <button type="submit">Submit</button>
-    </form>
+    <div class="form">
+      <div class = "signup">
+        <h2>Sign Up</h2>
+        <form action="/signup" method="POST">
+          <div class="details">
+            <label for="name">Username:</label>
+            <input type="text" name="name" placeholder="Username" required />
+          </div>
+          <div class="details">
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Password" required />
+          </div>
+          <div class="details">
+            <label for="conf_password">Confirm Password:</label>
+            <input
+              type="password"
+              name="conf_password"
+              placeholder="Confirm Password"
+              required
+            />
+          </div>
+          <div class="details">
+            <label for="house">House:</label>
+            <select name="house" id="house">
+              <option value="Gryffindor">Gryffindor</option>
+              <option value="Slytherin">Slytherin</option>
+              <option value="Ravenclaw">Ravenclaw</option>
+              <option value="Hufflepuf">Hufflepuf</option>
+            </select>
+          </div>
+          <button type="submit">Submit</button>
+        </form>
 
-    <a href="/">Go back to login Page</a>
+        <a href="/">Go back to login Page</a>
+      </div>
+    </div>
   </body>
 </html>
