@@ -20,8 +20,8 @@ form.addEventListener('submit', (e) => {
     messageInput.value='';
 });
 
-const name_ofuser = prompt('Enter Your Name to join');
-socket.emit('new-user-joined', name_ofuser, roomName );
+// const name_ofuser = prompt('Enter Your Name to join');
+socket.emit('new-user-joined', name_user, roomName );
 
 socket.on('user-joined', (name) => {
     append(`${name} joined the chat`,'right');

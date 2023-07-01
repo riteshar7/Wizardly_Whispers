@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conversa | <%= room %></title>
+    <title>Conversa | <%= user.house %></title>
     <script>
-      const roomName = "<%= room %>";
+      const roomName = "<%= user.house %>";
+      const name_user = "<%= user.name %>";
     </script>
     <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
     <script defer src="/js/client.js"></script>
@@ -13,7 +14,7 @@
   </head>
   <body>
     <div class="app-container">
-      <div class="house-info"><h2 class="housename"><%= room %></h2></div>
+      <div class="house-info"><h2 class="housename"><%= user.house %></h2></div>
       <div class="chatbox">
         <div class="container">
           <div class="message right">Me: Hello, How r u?</div>

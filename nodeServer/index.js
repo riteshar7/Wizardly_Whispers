@@ -52,8 +52,14 @@ app.get('/login',(req, res) => {
     res.redirect('/');
 })
 
-app.get('/:id', (req, res) => {
-    res.render('index',{room: req.params.id});
+app.get('/:id', async(req, res) => {
+    await UserLogin.findById(req.params.id)
+            .then((result) => {
+                res.render('index',{user: result});
+            })
+            .catch((err) => {
+                console.log(err);
+            });
 })
 
 app.post('/signup', async(req, res) => {
@@ -79,7 +85,13 @@ app.post('/signup', async(req, res) => {
                 if(!rooms[data.house]){
                     rooms[data.house] = { users:{} };
                 }
-                res.redirect(data.house);
+                UserLogin.findOne({name: data.name})
+                    .then((data) => {
+                        res.redirect(data._id);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    })
             })
             .catch((err) => {
                 console.log(err);
@@ -97,7 +109,7 @@ app.post('/login',async(req, res) => {
                 rooms[house] = { users:{} };
             }
             // console.log(house);
-            res.redirect(house);
+            res.redirect(check._id);
         }
         else{
             console.log('Wrong Password');
