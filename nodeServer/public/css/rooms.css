@@ -1,0 +1,445 @@
+/* --------------------------------------- Body ----------------------------------------- */
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+.app-container{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: none;
+  overflow: hidden;
+}
+
+/* ------------------------------- GriffindorColorScheme ------------------------------- */
+
+.Griffin .house-info{
+  background-color: rgba(154,4,23,0.8);
+  border-right: 0.3px solid rgb(229,167,44);
+}
+
+.Griffin .housename{
+  /* background-color: rgba(147, 29, 0, 0.7); */
+  border-color: transparent rgb(229,167,44);
+}
+
+.Griffin .chatbox{
+  background-image: url('/image/1301375.jpg');
+}
+
+.Griffin .left{
+  background-color: rgb(130,24,34);
+  color: rgb(229,167,44);
+}
+
+/* .Griffin .left::before{
+  border-right: 5px solid gold;
+}
+
+.Griffin .left::after{
+  position: relative;
+  border-left: 5px solid gold;
+} */
+
+.Griffin .right{
+  background-color: rgba(229,167,44,0.9);
+}
+
+/* .Griffin .right::before{
+  position: relative;
+  border-right: 5px solid rgb(251, 108, 31);
+}
+
+.Griffin .right::after{
+  border-left: 5px solid rgb(251, 108, 31);
+} */
+
+.Griffin #send-container{
+  background-color: rgba(154,4,23,0.7);
+}
+
+.Griffin input{
+  color: rgb(229,167,44);
+}
+
+.Griffin input::placeholder{
+  color: rgb(144, 123, 83);
+}
+
+.Griffin .button{
+  background-color: rgb(154,4,23);
+  box-shadow: 2px 2px 2px rgb(229,167,44);
+}
+
+.Griffin .arrow-down, .Griffin .arrow-up{
+  border-left: solid 25px rgb(229,167,44);
+}
+
+/* ------------------------------- SlytherinColorScheme ------------------------------- */
+
+.Sly .house-info{
+  background-color: rgba(60,115,63, 0.9);
+  border: solid transparent;
+  border-width: 0px 0.3px 0px 0px;
+  border-color: transparent rgb(216,218,217);
+}
+
+.Sly .housename{
+  /* background-color: rgba(147, 29, 0, 0.7); */
+  border-color: transparent rgb(216,218,217);
+}
+
+.Sly .chatbox{
+  background-image: url('/image/1301378.jpg');
+}
+
+.Sly .left{
+  background-color: rgb(34,80,37);
+  color: rgb(236, 236, 233);
+}
+
+/* .Sly .left::before{
+  border-right: 5px solid gold;
+}
+
+.Sly .left::after{
+  position: relative;
+  border-left: 5px solid gold;
+} */
+
+.Sly .right{
+  background-color: rgba(165,223,139,0.85);
+}
+
+/* .Sly .right::before{
+  position: relative;
+  border-right: 5px solid rgb(251, 108, 31);
+}
+
+.Sly .right::after{
+  border-left: 5px solid rgb(251, 108, 31);
+} */
+
+.Sly #send-container{
+  background-color: rgba(28,60,36, 0.9);
+}
+
+.Sly input{
+  color: rgb(216, 218, 217);
+}
+
+.Sly input::placeholder{
+  color: rgb(153,153,153);
+}
+
+.Sly .button{
+  background-color: rgb(28,60,36);
+  box-shadow: 2px 2px 2px rgb(216,218,217);
+}
+
+.Sly .arrow-down, .Sly .arrow-up{
+  border-left: solid 25px rgb(216,218,217);
+}
+
+
+/* ------------------------------- RavenclawColorScheme ------------------------------- */
+
+.Raven .house-info{
+  background-color: rgb(0, 64, 128);
+  border-right: 0.3px solid rgb(153, 153, 153);
+}
+
+.Raven .housename{
+  /* background-color: rgba(147, 29, 0, 0.7); */
+  border-color: transparent rgb(153,153,153);
+}
+
+.Raven .chatbox{
+  background-image: url('/image/1301377.jpg');
+}
+
+.Raven .left{
+  background-color: rgb(0, 64, 128);
+  color: rgb(217, 217, 217);
+}
+
+/* .Raven .left::before{
+  border-right: 5px solid gold;
+}
+
+.Raven .left::after{
+  position: relative;
+  border-left: 5px solid gold;
+} */
+
+.Raven .right{
+  background-color: rgba(217, 217, 217,0.85);
+}
+
+/* .Raven .right::before{
+  position: relative;
+  border-right: 5px solid rgb(251, 108, 31);
+}
+
+.Raven .right::after{
+  border-left: 5px solid rgb(251, 108, 31);
+} */
+
+.Raven #send-container{
+  background-color: rgba(0,64,128, 0.9);
+}
+
+.Raven input{
+  color: rgb(217, 217, 217);
+}
+
+.Raven input::placeholder{
+  color: rgb(153,153,153);
+}
+
+.Raven .button{
+  background-color: rgb(0, 64, 128);
+  box-shadow: 2px 2px 2px rgb(217, 217, 217);
+}
+
+.Raven .arrow-down,.Raven .arrow-up{
+  border-left: solid 25px rgb(217, 217, 217);
+}
+
+/* ------------------------------- HufflepufColorScheme ------------------------------- */
+
+.Huff .house-info{
+  background-color: rgba(244, 236, 7, 0.9);
+  border-right: 0.3px solid black;
+}
+
+.Huff .housename{
+  /* background-color: rgba(147, 29, 0, 0.7); */
+  border-color: transparent rgb(157,125,9);
+}
+
+.Huff .chatbox{
+  background-image: url('/image/1301376.jpg');
+}
+
+.Huff .left{
+  background-color: rgba(94,27,10,1);
+  color: rgb(243, 236, 141);
+}
+
+/* .Huff .left::before{
+  border-right: 5px solid gold;
+}
+
+.Huff .left::after{
+  position: relative;
+  border-left: 5px solid gold;
+} */
+
+.Huff .right{
+  background-color: rgba(244, 236, 7,0.85);
+}
+
+/* .Huff .right::before{
+  position: relative;
+  border-right: 5px solid rgb(251, 108, 31);
+}
+
+.Huff .right::after{
+  border-left: 5px solid rgb(251, 108, 31);
+} */
+
+.Huff #send-container{
+  background-color: rgba(244, 236, 7,0.7);
+}
+
+.Huff .button{
+  background-color: rgb(244, 236, 7);
+  box-shadow: 2px 2px 2px;
+}
+
+.Huff input{
+  color: rgb(94,27,10);
+}
+
+.Huff input::placeholder{
+  color: rgb(94, 72, 66);
+}
+
+.Huff .arrow-down, .Huff .arrow-up{
+  border-left: solid 25px black;
+}
+
+/* ------------------------------------- InfoArea ------------------------------------- */
+
+.house-info {
+  flex: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+h2{
+  font-family: MagicSchool;
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  margin: 2px;
+}
+
+.housename {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-style: solid;
+  border-width: 0px 5px;
+}
+
+a{
+  position: absolute;
+  display: block;
+  bottom: 10px;
+}
+
+
+/* ------------------------------------- ChatArea ------------------------------------- */
+
+.chatbox {
+  flex: 75%;
+  background-size: 75vw 100vh;
+}
+
+.container {
+  margin: auto;
+  height: 90vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  margin-bottom: 20px;
+}
+
+/* ------------------------------------- Messages ------------------------------------- */
+
+/* .message::after, .message::before{
+  content: "";
+  border-style: solid;
+  bottom: 0px;
+  width: 0;
+  height: 0;
+  border-top: 2px transparent solid;
+  border-bottom: 2px transparent solid;
+}
+
+.message::after{
+  right: -11.5px;
+  border-right: 2px solid transparent;
+}
+
+.message::before{
+  left: -11.5px;
+  border-left: 2px solid transparent;
+} */
+
+.message {
+  width: fit-content;
+  max-width: 45vw;
+  overflow-x: hidden;
+  margin: 8px 12px;
+  padding: 5px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-family: Aver;
+}
+
+.left {
+  float: left;
+  clear: both;
+}
+
+.right {
+  float: right;
+  clear: both;
+}
+
+/* ------------------------------------- TextArea ------------------------------------- */
+
+#send-container{
+  position: absolute;
+  width: 75%;
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  bottom: 0px;
+}
+
+#messageInp {
+  width: 88%;
+  height: 35px;
+  border-radius: 5px;
+  background-color: transparent;
+  margin: 5px;
+  outline: none;
+  border-style: none;
+  font-family: Aver;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* --------------------------------------- Send Button --------------------------------------- */
+
+.button{
+  position: fixed;
+  bottom: 11px;
+  right: 1vw;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 10px;
+  border: none;
+}
+
+.button:active{
+  transition: 100ms;
+  box-shadow: none;
+}
+
+.arrow-up{
+  width: 0px;
+  height: 0px;
+  border-top: solid 12.5px transparent;
+  border-bottom-left-radius: 10px;
+}
+
+.arrow-down{
+  margin-top: 2px;
+  width: 0px;
+  height: 0px;
+  border-bottom: solid 12.5px transparent;
+  border-top-left-radius: 10px;
+}
+
+/* ------------------------------------- FontStyles ------------------------------------- */
+
+@font-face{
+  font-family: MagicSchool;
+  src: url('/fonts/magic-school.one.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Aver;
+  src: url('/fonts/Aver-opKo.ttf') format('truetype');
+}
