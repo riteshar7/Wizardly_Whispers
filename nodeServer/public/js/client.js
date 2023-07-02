@@ -3,6 +3,7 @@ const socket = io('http://localhost:8000');
 const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector('.container');
+const userList = document.querySelector('.namelist');
 
 const append = (message, position) => {
     const messageElement = document.createElement('div');
@@ -25,6 +26,10 @@ socket.emit('new-user-joined', name_user, roomName );
 
 socket.on('user-joined', (name) => {
     // append(`${name} joined the chat`,'right');
+    const userElement = document.createElement('p');
+    userElement.innerText = name;
+    userElement.classList.add('name');
+    userList.appendChild(userElement);
 });
 
 socket.on('receive', (data) => {

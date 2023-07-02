@@ -70,33 +70,36 @@ app.post('/signup', async(req, res) => {
     // UserLogin.insertMany([data]);
     const check = await UserLogin.findOne({name:req.body.name});
     if(check){
-        res.send('<h3 align= "center">Error!! Username Already Exists</h3>');
+        res.send('<script>alert("Username Already Exists!")</script>');
     }
-    else{
-        const data = {
-            name: req.body.name,
-            password: req.body.password,
-            house: req.body.house,
-        }
-        // const data = new UserLogin(req.body);
-        await UserLogin.insertMany([data])
-            .then((result) => {
-                // res.render('index');
-                if(!rooms[data.house]){
-                    rooms[data.house] = { users:{} };
-                }
-                UserLogin.findOne({name: data.name})
-                    .then((data) => {
-                        res.redirect(data._id);
-                    })
-                    .catch((err) => {
-                        console.log(err);
-                    })
-            })
-            .catch((err) => {
-                console.log(err);
-            });
+    else if(req.body.password!==req.body.conf_password){
+        res.send('<script>alert("Password does not match confirmation!")</script>');
     }
+    // else{
+    //     const data = {
+    //         name: req.body.name,
+    //         password: req.body.password,
+    //         house: req.body.house,
+    //     }
+    //     // const data = new UserLogin(req.body);
+    //     await UserLogin.insertMany([data])
+    //         .then((result) => {
+    //             // res.render('index');
+    //             if(!rooms[data.house]){
+    //                 rooms[data.house] = { users:{} };
+    //             }
+    //             UserLogin.findOne({name: data.name})
+    //                 .then((data) => {
+    //                     res.redirect(data._id);
+    //                 })
+    //                 .catch((err) => {
+    //                     console.log(err);
+    //                 })
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         });
+    // }
 });
 
 app.post('/login',async(req, res) => {
@@ -113,6 +116,7 @@ app.post('/login',async(req, res) => {
         }
         else{
             console.log('Wrong Password');
+            res.send('<script>alert("Wrong password")</script>');
         }
     }
     catch{
