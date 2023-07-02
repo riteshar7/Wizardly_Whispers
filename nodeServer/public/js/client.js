@@ -24,7 +24,7 @@ form.addEventListener('submit', (e) => {
 socket.emit('new-user-joined', name_user, roomName );
 
 socket.on('user-joined', (name) => {
-    append(`${name} joined the chat`,'right');
+    // append(`${name} joined the chat`,'right');
 });
 
 socket.on('receive', (data) => {

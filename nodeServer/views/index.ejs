@@ -14,7 +14,7 @@
   </head>
   <body>
     <% if (user.house == 'Gryffindor') { %>
-     <div class="Griffin app-container">
+    <div class="Griffin app-container">
       <div class="house-info">
         <h2 class="housename"><%= user.house %></h2>
         <a href="/login">Logout</a>
@@ -41,94 +41,94 @@
           </form>
         </div>
       </div>
-     </div>
+    </div>
     <% } else if (user.house == 'Slytherin') { %>
-      <div class="Sly app-container">
-        <div class="house-info">
-          <h2 class="housename"><%= user.house %></h2>
-          <a href="/login">Logout</a>
+    <div class="Sly app-container">
+      <div class="house-info">
+        <h2 class="housename"><%= user.house %></h2>
+        <a href="/login">Logout</a>
+      </div>
+      <div class="chatbox">
+        <div class="container">
+          <div class="message right">Me: Hello, How r u?</div>
+          <div class="message left">Prachi: Hi, I joined right now</div>
         </div>
-        <div class="chatbox">
-          <div class="container">
-            <div class="message right">Me: Hello, How r u?</div>
-            <div class="message left">Prachi: Hi, I joined right now</div>
-          </div>
 
-          <div class="send">
-            <form action="#" id="send-container">
-              <input
-                type="text"
-                id="messageInp"
-                name="messageInp"
-                placeholder="Type Message..."
-                required
-              />
-              <button class="button" type="submit">
-                <div class="arrow-up"></div>
-                <div class="arrow-down"></div>
-              </button>
-            </form>
-          </div>
+        <div class="send">
+          <form action="#" id="send-container">
+            <input
+              type="text"
+              id="messageInp"
+              name="messageInp"
+              placeholder="Type Message..."
+              required
+            />
+            <button class="button" type="submit">
+              <div class="arrow-up"></div>
+              <div class="arrow-down"></div>
+            </button>
+          </form>
         </div>
       </div>
-      <% } else if (user.house == 'Ravenclaw') { %>
-        <div class="Raven app-container">
-          <div class="house-info">
-            <h2 class="housename"><%= user.house %></h2>
-            <a href="/login">Logout</a>
-          </div>
-          <div class="chatbox">
-            <div class="container">
-              <div class="message right">Me: Hello, How r u?</div>
-              <div class="message left">Prachi: Hi, I joined right now</div>
-            </div>
-  
-            <div class="send">
-              <form action="#" id="send-container">
-                <input
-                  type="text"
-                  id="messageInp"
-                  name="messageInp"
-                  placeholder="Type Message..."
-                  required
-                />
-                <button class="button" type="submit">
-                  <div class="arrow-up"></div>
-                  <div class="arrow-down"></div>
-                </button>
-              </form>
-            </div>
-          </div>
+    </div>
+    <% } else if (user.house == 'Ravenclaw') { %>
+    <div class="Raven app-container">
+      <div class="house-info">
+        <h2 class="housename"><%= user.house %></h2>
+        <a href="/login">Logout</a>
+      </div>
+      <div class="chatbox">
+        <div class="container">
+          <div class="message right">Me: Hello, How r u?</div>
+          <div class="message left">Prachi: Hi, I joined right now</div>
         </div>
-        <% } else if (user.house == 'Hufflepuf') { %>
-          <div class="Huff app-container">
-            <div class="house-info">
-              <h2 class="housename"><%= user.house %></h2>
-              <a href="/login">Logout</a>
-            </div>
-            <div class="chatbox">
-              <div class="container">
-                <div class="message right">Me: Hello, How r u?</div>
-                <div class="message left">Prachi: Hi, I joined right now</div>
-              </div>
-    
-              <div class="send">
-                <form action="#" id="send-container">
-                  <input
-                    type="text"
-                    id="messageInp"
-                    name="messageInp"
-                    placeholder="Type Message..."
-                    required
-                  />
-                  <button class="button" type="submit">
-                    <div class="arrow-up"></div>
-                    <div class="arrow-down"></div>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        <% } %>
+
+        <div class="send">
+          <form action="#" id="send-container">
+            <input
+              type="text"
+              id="messageInp"
+              name="messageInp"
+              placeholder="Type Message..."
+              required
+            />
+            <button class="button" type="submit">
+              <div class="arrow-up"></div>
+              <div class="arrow-down"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <% } else if (user.house == 'Hufflepuf') { %>
+    <div class="Huff app-container">
+      <div class="house-info">
+        <h2 class="housename"><%= user.house %></h2>
+        <a href="/login">Logout</a>
+      </div>
+      <div class="chatbox">
+        <div class="container">
+          <div class="message right">Me: Hello, How r u?</div>
+          <div class="message left">Prachi: Hi, I joined right now</div>
+        </div>
+
+        <div class="send">
+          <form action="#" id="send-container">
+            <input
+              type="text"
+              id="messageInp"
+              name="messageInp"
+              placeholder="Type Message..."
+              required
+            />
+            <button class="button" type="submit">
+              <div class="arrow-up"></div>
+              <div class="arrow-down"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <% } %>
   </body>
 </html>

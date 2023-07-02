@@ -28,7 +28,7 @@ io.on('connection', (socket) => {
         socket.join(room);
         rooms[room].users[socket.id] = name;
         console.log(rooms);
-        socket.broadcast.to(room).emit('user-joined', name);
+        io.to(room).emit('user-joined', name);
     });
     socket.on('send', (message, room) => {
         socket.broadcast.to(room).emit('receive', {message: message, name: rooms[room].users[socket.id]});
