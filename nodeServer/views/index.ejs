@@ -43,6 +43,14 @@
       </div>
       <div class="chatbox">
         <div class="container">
+          <% chats.forEach(chatElement=>{ %>
+          <%if(chatElement.name==user.name){%>
+          <div class="message right">Me: <%= chatElement.message %></div>
+          <% } else{%>
+          <div class="message left">
+            <%= chatElement.name %>: <%= chatElement.message %>
+          </div>
+          <% } }) %>
           <!-- <div class="message right">Me: Hello, How r u?</div>
           <div class="message left">Person: Hi, I joined right now</div>
           <div class="message center">Mystery joined the chat</div> -->
@@ -81,6 +89,14 @@
       </div>
       <div class="chatbox">
         <div class="container">
+          <% chats.forEach(chatElement=>{ %>
+          <%if(chatElement.name==user.name){%>
+          <div class="message right">Me: <%= chatElement.message %></div>
+          <% } else{%>
+          <div class="message left">
+            <%= chatElement.name %>: <%= chatElement.message %>
+          </div>
+          <% } }) %>
           <!-- <div class="message right">Me: Hello, How r u?</div>
           <div class="message left">Person: Hi, I joined right now</div>
           <div class="message center">Mystery joined the chat</div> -->
@@ -120,6 +136,14 @@
       </div>
       <div class="chatbox">
         <div class="container">
+          <% chats.forEach(chatElement=>{ %>
+          <%if(chatElement.name==user.name){%>
+          <div class="message right">Me: <%= chatElement.message %></div>
+          <% } else{%>
+          <div class="message left">
+            <%= chatElement.name %>: <%= chatElement.message %>
+          </div>
+          <% } }) %>
           <!-- <div class="message right">Me: Hello, How r u?</div>
           <div class="message left">Person: Hi, I joined right now</div>
           <div class="message center">Mystery joined the chat</div> -->
@@ -158,6 +182,14 @@
       </div>
       <div class="chatbox">
         <div class="container">
+          <% chats.forEach(chatElement=>{ %>
+          <%if(chatElement.name==user.name){%>
+          <div class="message right">Me: <%= chatElement.message %></div>
+          <% } else{%>
+          <div class="message left">
+            <%= chatElement.name %>: <%= chatElement.message %>
+          </div>
+          <% } }) %>
           <!-- <div class="message right">Me: Hello, How r u?</div>
           <div class="message left">Person: Hi, I joined right now</div>
           <div class="message center">Mystery jooined the chat</div> -->

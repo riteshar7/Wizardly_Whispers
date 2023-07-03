@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const message =messageInput.value;
     append(`Me: ${message}`,'right');
-    socket.emit('send', message, roomName );
+    socket.emit('send', name_user, message, roomName );
     messageInput.value='';
 });
 

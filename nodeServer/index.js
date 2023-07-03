@@ -4,6 +4,7 @@
 
 const express = require('express');
 const UserLogin = require('./models/userModel');
+const Chats = require('./models/chatModel');
 
 const app = express();
 
@@ -30,8 +31,18 @@ io.on('connection', (socket) => {
         console.log(rooms);
         socket.broadcast.to(room).emit('user-joined', name);
     });
-    socket.on('send', (message, room) => {
+    socket.on('send', (username, message, room) => {
         socket.broadcast.to(room).emit('receive', {message: message, name: rooms[room].users[socket.id]});
+        const housechat = {
+            name: username,
+            message: message,
+            house: room,
+        };
+        Chats.insertMany([housechat])
+            .then((result) => {
+                console.log(result);
+            })
+            .catch(err => console.log(err));
     });
 
     // socket.on('disconnect', (message) => {
@@ -50,7 +61,7 @@ app.get('/',(req, res) => {
 
 app.get('/login',(req, res) => {
     res.redirect('/');
-})
+});
 
 app.get('/:id', async(req, res) => {
     if(req.params.id === "favicon.ico"){
@@ -60,7 +71,12 @@ app.get('/:id', async(req, res) => {
             .then((result) => {
                 UserLogin.find({house: result.house},{_id:0,name:1})
                     .then((ch) => {
-                        res.render('index',{user: result, userhouse: ch});
+                        Chats.find({house: result.house},{_id:0,name:1,message:1}).sort({_id:1})
+                        .then((chat) => {
+                            console.log(chat);
+                            res.render('index',{user: result, userhouse: ch, chats: chat});
+                        })
+                        .catch(err => console.log(err));
                     })
                     .catch(err => console.log(err));
             })
