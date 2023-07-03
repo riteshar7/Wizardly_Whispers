@@ -36,6 +36,14 @@ body::-webkit-scrollbar {
   border-color: transparent rgb(229, 167, 44);
 }
 
+.Griffin h3{
+  color: rgb(255, 205, 0);
+}
+
+.Griffin .namelist{
+  color: rgb(229,167,44);
+}
+
 .Griffin a {
   background-color: rgb(229, 167, 44);
 }
@@ -81,6 +89,11 @@ body::-webkit-scrollbar {
 /*.Griffin .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
+
+.Griffin .container::-webkit-scrollbar-thumb{
+  border-radius: 2.5px;
+  background: rgb(180, 131, 33);
+}
 
 .Griffin #send-container {
   background-color: rgba(154, 4, 23, 0.7);
@@ -159,6 +172,11 @@ body::-webkit-scrollbar {
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
+.Sly .container::-webkit-scrollbar-thumb{
+  border-radius: 2.5px;
+  background: rgb(107, 144, 90);
+}
+
 .Sly #send-container {
   background-color: rgba(28, 60, 36, 0.9);
 }
@@ -186,6 +204,14 @@ body::-webkit-scrollbar {
 .Raven .housename {
   /* background-color: rgba(147, 29, 0, 0.7); */
   border-color: rgb(153, 153, 153);
+}
+
+.Raven h3{
+  color: rgb(218, 215, 215);
+}
+
+.Raven .namelist{
+  color: rgb(176, 176, 176);
 }
 
 .Raven a {
@@ -233,6 +259,12 @@ body::-webkit-scrollbar {
 /*.Raven .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
+
+.Raven .container::-webkit-scrollbar-thumb{
+  border-radius: 2.5px;
+  background: rgb(0, 119, 238);
+}
+
 
 .Raven #send-container {
   background-color: rgba(0, 64, 128, 0.9);
@@ -308,6 +340,11 @@ body::-webkit-scrollbar {
 /*.Huff .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
+
+.Huff .container::-webkit-scrollbar-thumb{
+  border-radius: 2.5px;
+  background: rgb(196, 155, 9);
+}
 
 .Huff #send-container {
   background-color: rgba(244, 236, 7, 0.7);
