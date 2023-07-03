@@ -104,31 +104,6 @@ app.post('/signup', async(req, res) => {
                 console.log(err);
             });
     }
-    else{
-        const data = {
-            name: req.body.name,
-            password: req.body.password,
-            house: req.body.house,
-        }
-        // const data = new UserLogin(req.body);
-        await UserLogin.insertMany([data])
-            .then((result) => {
-                // res.render('index');
-                if(!rooms[data.house]){
-                    rooms[data.house] = { users:{} };
-                }
-                UserLogin.findOne({name: data.name})
-                    .then((data) => {
-                        res.redirect(data._id);
-                    })
-                    .catch((err) => {
-                        console.log(err);
-                    })
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    }
 });
 
 app.post('/login',async(req, res) => {
