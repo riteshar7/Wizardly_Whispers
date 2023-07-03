@@ -54,25 +54,31 @@ body::-webkit-scrollbar {
   color: rgb(229, 167, 44);
 }
 
-/* .Griffin .left::before{
-  border-right: 5px solid gold;
+.Griffin .left::-webkit-scrollbar-thumb {
+  background: rgb(158, 29, 41);
 }
 
-.Griffin .left::after{
-  position: relative;
-  border-left: 5px solid gold;
-} */
+.Griffin .left::-webkit-scrollbar-thumb:hover {
+  background: rgb(203, 36, 53);
+}
+
+/* .Griffin .left::before{
+  border-right: 5px solid gold;
+}*/
 
 .Griffin .right {
   background-color: rgba(229, 167, 44, 0.9);
 }
 
-/* .Griffin .right::before{
-  position: relative;
-  border-right: 5px solid rgb(251, 108, 31);
+.Griffin .right::-webkit-scrollbar-thumb {
+  background: rgb(180, 131, 33);
 }
 
-.Griffin .right::after{
+.Griffin .right::-webkit-scrollbar-thumb:hover {
+  background: rgb(136, 99, 24);
+}
+
+/*.Griffin .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
@@ -86,11 +92,6 @@ body::-webkit-scrollbar {
 
 .Griffin input::placeholder {
   color: rgb(144, 123, 83);
-}
-
-.Griffin .button {
-  background-color: rgb(154, 4, 23);
-  box-shadow: 2px 2px 2px rgb(229, 167, 44);
 }
 
 .Griffin .arrow-down,
@@ -130,25 +131,31 @@ body::-webkit-scrollbar {
   color: rgb(236, 236, 233);
 }
 
-/* .Sly .left::before{
-  border-right: 5px solid gold;
+.Sly .left::-webkit-scrollbar-thumb {
+  background: rgb(46, 111, 51);
 }
 
-.Sly .left::after{
-  position: relative;
-  border-left: 5px solid gold;
-} */
+.Sly .left::-webkit-scrollbar-thumb:hover {
+  background: rgb(75, 177, 82);
+}
+
+/* .Sly .left::before{
+  border-right: 5px solid gold;
+}*/
 
 .Sly .right {
   background-color: rgba(165, 223, 139, 0.85);
 }
 
-/* .Sly .right::before{
-  position: relative;
-  border-right: 5px solid rgb(251, 108, 31);
+.Sly .right::-webkit-scrollbar-thumb {
+  background: rgb(107, 144, 90);
 }
 
-.Sly .right::after{
+.Sly .right::-webkit-scrollbar-thumb:hover {
+  background: rgb(80, 107, 67);
+}
+
+/*.Sly .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
@@ -162,11 +169,6 @@ body::-webkit-scrollbar {
 
 .Sly input::placeholder {
   color: rgb(153, 153, 153);
-}
-
-.Sly .button {
-  background-color: rgb(28, 60, 36);
-  box-shadow: 2px 2px 2px rgb(216, 218, 217);
 }
 
 .Sly .arrow-down,
@@ -192,7 +194,7 @@ body::-webkit-scrollbar {
 
 .Raven a:hover,
 .Raven a:active {
-  color: rgb(0, 64, 128);
+  color: rgb(0, 49, 97);
 }
 
 .Raven .chatbox {
@@ -204,25 +206,31 @@ body::-webkit-scrollbar {
   color: rgb(217, 217, 217);
 }
 
-/* .Raven .left::before{
-  border-right: 5px solid gold;
+.Raven .left::-webkit-scrollbar-thumb {
+  background: rgb(0, 94, 187);
 }
 
-.Raven .left::after{
-  position: relative;
-  border-left: 5px solid gold;
-} */
+.Raven .left::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 119, 238);
+}
+
+/* .Raven .left::before{
+  border-right: 5px solid gold;
+}*/
 
 .Raven .right {
   background-color: rgba(217, 217, 217, 0.85);
 }
 
-/* .Raven .right::before{
-  position: relative;
-  border-right: 5px solid rgb(251, 108, 31);
+.Raven .right::-webkit-scrollbar-thumb {
+  background: rgb(156, 156, 156);
 }
 
-.Raven .right::after{
+.Raven .right::-webkit-scrollbar-thumb:hover {
+  background: rgb(123, 123, 123);
+}
+
+/*.Raven .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
@@ -236,11 +244,6 @@ body::-webkit-scrollbar {
 
 .Raven input::placeholder {
   color: rgb(153, 153, 153);
-}
-
-.Raven .button {
-  background-color: rgb(0, 64, 128);
-  box-shadow: 2px 2px 2px rgb(217, 217, 217);
 }
 
 .Raven .arrow-down,
@@ -278,35 +281,36 @@ body::-webkit-scrollbar {
   color: rgb(243, 236, 141);
 }
 
-/* .Huff .left::before{
-  border-right: 5px solid gold;
+.Huff .left::-webkit-scrollbar-thumb {
+  background: rgb(156, 40, 10);
 }
 
-.Huff .left::after{
-  position: relative;
-  border-left: 5px solid gold;
-} */
+.Huff .left::-webkit-scrollbar-thumb:hover {
+  background: rgb(189, 46, 10);
+}
+
+/* .Huff .left::before{
+  border-right: 5px solid gold;
+}*/
 
 .Huff .right {
   background-color: rgba(244, 236, 7, 0.85);
 }
 
-/* .Huff .right::before{
-  position: relative;
-  border-right: 5px solid rgb(251, 108, 31);
+.Huff .right::-webkit-scrollbar-thumb {
+  background: rgb(196, 155, 9);
 }
 
-.Huff .right::after{
+.Huff .right::-webkit-scrollbar-thumb:hover {
+  background: rgb(157, 125, 9);
+}
+
+/*.Huff .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
 .Huff #send-container {
   background-color: rgba(244, 236, 7, 0.7);
-}
-
-.Huff .button {
-  background-color: rgb(244, 236, 7);
-  box-shadow: 2px 2px 2px;
 }
 
 .Huff input {
@@ -349,15 +353,21 @@ h2 {
 .namelist {
   position: absolute;
   text-align: center;
-  top: 17.5vh;
-  height: 70vh;
+  top: 21vh;
+  height: 64vh;
   width: 25vw;
   overflow-y: auto;
   scroll-behavior: smooth;
+  font-family: Aver;
+  font-size: 18px;
 }
 
-.name {
-  font-family: Aver;
+.namelist::-webkit-scrollbar {
+  width: 5px;
+}
+
+.namelist::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 a {
@@ -394,6 +404,14 @@ a:visited {
   margin-bottom: 20px;
 }
 
+.container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 /* ------------------------------------- Messages ------------------------------------- */
 
 /* .message::after, .message::before{
@@ -421,13 +439,21 @@ a:visited {
   max-width: 45vw;
   overflow-x: auto;
   margin: 8px 12px;
-  padding: 5px;
+  padding: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 5px;
   font-size: 17px;
   font-family: Aver;
   letter-spacing: 0.5px;
+}
+
+.message::-webkit-scrollbar {
+  height: 10px;
+}
+
+.message::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .left {
@@ -452,6 +478,7 @@ a:visited {
   display: flex;
   flex-direction: row;
   justify-items: center;
+  align-items: center;
   bottom: 0px;
 }
 
@@ -465,7 +492,7 @@ a:visited {
   border-style: none;
   font-family: Aver;
   font-weight: 600;
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 0.5px;
 }
 
@@ -481,6 +508,7 @@ a:visited {
   border-radius: 20px;
   padding-left: 10px;
   border: none;
+  background-color: transparent;
 }
 
 .button:active {
@@ -508,6 +536,11 @@ a:visited {
 @font-face {
   font-family: MagicSchool;
   src: url("/fonts/magic-school.one.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Coinage;
+  src: url("/fonts/CoinageCapsKrugerGray-8KvB.ttf") format("truetype");
 }
 
 @font-face {
