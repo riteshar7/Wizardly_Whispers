@@ -18,6 +18,9 @@
       <div class="house-info">
         <h2 class="housename"><%= user.house %></h2>
         <div class="namelist">
+          <% if (userhouse.length>0) { %> <% userhouse.forEach(element => { %>
+          <p class="name"><%= element.name %></p>
+          <% }); %> <% } %>
           <!-- <p class="name">zomato</p>
           <p class="name">user1</p>
           <p class="name">flipkart</p>
@@ -65,6 +68,9 @@
       <div class="house-info">
         <h2 class="housename"><%= user.house %></h2>
         <div class="namelist">
+          <% if (userhouse.length>0) { %> <% userhouse.forEach(element => { %>
+          <p class="name"><%= element.name %></p>
+          <% }); %> <% } %>
           <!-- <p class="name">flipkart</p>
           <p class="name">swiggy</p> -->
         </div>
@@ -98,6 +104,9 @@
       <div class="house-info">
         <h2 class="housename"><%= user.house %></h2>
         <div class="namelist">
+          <% if (userhouse.length>0) { %> <% userhouse.forEach(element => { %>
+          <p class="name"><%= element.name %></p>
+          <% }); %> <% } %>
           <!-- <p class="name">twitter</p>
           <p class="name">tvf</p>
           <p class="name">amazon</p> -->
@@ -132,6 +141,9 @@
       <div class="house-info">
         <h2 class="housename"><%= user.house %></h2>
         <div class="namelist">
+          <% if (userhouse.length>0) { %> <% userhouse.forEach(element => { %>
+          <p class="name"><%= element.name %></p>
+          <% }); %> <% } %>
           <!-- <p class="name">panero</p>
           <p class="name">Huff</p> -->
         </div>

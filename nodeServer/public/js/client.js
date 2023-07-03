@@ -25,11 +25,11 @@ form.addEventListener('submit', (e) => {
 socket.emit('new-user-joined', name_user, roomName );
 
 socket.on('user-joined', (name) => {
-    // append(`${name} joined the chat`,'right');
-    const userElement = document.createElement('p');
-    userElement.innerText = name;
-    userElement.classList.add('name');
-    userList.appendChild(userElement);
+    append(`${name} joined the chat`,'center');
+    // const userElement = document.createElement('p');
+    // userElement.innerText = name;
+    // userElement.classList.add('name');
+    // userList.appendChild(userElement);
 });
 
 socket.on('receive', (data) => {

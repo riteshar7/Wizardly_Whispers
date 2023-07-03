@@ -28,7 +28,7 @@ io.on('connection', (socket) => {
         socket.join(room);
         rooms[room].users[socket.id] = name;
         console.log(rooms);
-        io.to(room).emit('user-joined', name);
+        socket.broadcast.to(room).emit('user-joined', name);
     });
     socket.on('send', (message, room) => {
         socket.broadcast.to(room).emit('receive', {message: message, name: rooms[room].users[socket.id]});
@@ -55,7 +55,11 @@ app.get('/login',(req, res) => {
 app.get('/:id', async(req, res) => {
     await UserLogin.findById(req.params.id)
             .then((result) => {
-                res.render('index',{user: result});
+                UserLogin.find({house: result.house},{_id:0,name:1})
+                    .then((ch) => {
+                        res.render('index',{user: result, userhouse: ch});
+                    })
+                    .catch(err => console.log(err));
             })
             .catch((err) => {
                 console.log(err);
@@ -70,36 +74,36 @@ app.post('/signup', async(req, res) => {
     // UserLogin.insertMany([data]);
     const check = await UserLogin.findOne({name:req.body.name});
     if(check){
-        res.send('<script>alert("Username Already Exists!")</script>');
+        res.send('<script>alert("Username Already Exists!")</script><a href="/login"><h2 align="center">Go to Login page</h2></a>');
     }
     else if(req.body.password!==req.body.conf_password){
-        res.send('<script>alert("Password does not match confirmation!")</script>');
+        res.send('<script>alert("Password does not match confirmation!")</script><a href="/signup"><h2 align="center">Go back to SignUp page</h2></a>');
     }
-    // else{
-    //     const data = {
-    //         name: req.body.name,
-    //         password: req.body.password,
-    //         house: req.body.house,
-    //     }
-    //     // const data = new UserLogin(req.body);
-    //     await UserLogin.insertMany([data])
-    //         .then((result) => {
-    //             // res.render('index');
-    //             if(!rooms[data.house]){
-    //                 rooms[data.house] = { users:{} };
-    //             }
-    //             UserLogin.findOne({name: data.name})
-    //                 .then((data) => {
-    //                     res.redirect(data._id);
-    //                 })
-    //                 .catch((err) => {
-    //                     console.log(err);
-    //                 })
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         });
-    // }
+    else{
+        const data = {
+            name: req.body.name,
+            password: req.body.password,
+            house: req.body.house,
+        }
+        // const data = new UserLogin(req.body);
+        await UserLogin.insertMany([data])
+            .then((result) => {
+                // res.render('index');
+                if(!rooms[data.house]){
+                    rooms[data.house] = { users:{} };
+                }
+                UserLogin.findOne({name: data.name})
+                    .then((data) => {
+                        res.redirect(data._id);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    })
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    }
 });
 
 app.post('/login',async(req, res) => {
@@ -116,10 +120,11 @@ app.post('/login',async(req, res) => {
         }
         else{
             console.log('Wrong Password');
-            res.send('<script>alert("Wrong password")</script>');
+            res.send('<script>alert("Wrong Password")</script><a href="/login"><h2 align="center">Go back to Login page</h2></a>');
         }
     }
     catch{
+        res.send('<script>alert("User Does Not Exists!")</script><a href="/login"><h2 align="center">Go back to Login page</h2></a>');
         console.log('Wrong Credintials');
     }
 });

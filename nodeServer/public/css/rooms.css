@@ -1,16 +1,17 @@
 /* --------------------------------------- Body ----------------------------------------- */
 
-html, body {
-    height: 100%;
-    width: 100%;
-    background-color: black;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
 }
 
-.app-container{
+.app-container {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -25,31 +26,32 @@ body::-webkit-scrollbar{
 
 /* ------------------------------- GriffindorColorScheme ------------------------------- */
 
-.Griffin .house-info{
-  background-color: rgba(154,4,23,0.8);
-  border-right: 0.3px solid rgb(229,167,44);
+.Griffin .house-info {
+  background-color: rgba(154, 4, 23, 0.8);
+  border-right: 0.3px solid rgb(229, 167, 44);
 }
 
-.Griffin .housename{
+.Griffin .housename {
   /* background-color: rgba(147, 29, 0, 0.7); */
-  border-color: transparent rgb(229,167,44);
+  border-color: transparent rgb(229, 167, 44);
 }
 
-.Griffin a{
-  background-color: rgb(229,167,44);
+.Griffin a {
+  background-color: rgb(229, 167, 44);
 }
 
-.Griffin a:hover, .Griffin a:active{
+.Griffin a:hover,
+.Griffin a:active {
   color: rgba(138, 4, 22, 0.8);
 }
 
-.Griffin .chatbox{
-  background-image: url('/image/1301375.jpg');
+.Griffin .chatbox {
+  background-image: url("/image/1301375.jpg");
 }
 
-.Griffin .left{
-  background-color: rgb(130,24,34);
-  color: rgb(229,167,44);
+.Griffin .left {
+  background-color: rgb(130, 24, 34);
+  color: rgb(229, 167, 44);
 }
 
 /* .Griffin .left::before{
@@ -61,8 +63,8 @@ body::-webkit-scrollbar{
   border-left: 5px solid gold;
 } */
 
-.Griffin .right{
-  background-color: rgba(229,167,44,0.9);
+.Griffin .right {
+  background-color: rgba(229, 167, 44, 0.9);
 }
 
 /* .Griffin .right::before{
@@ -74,55 +76,57 @@ body::-webkit-scrollbar{
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
-.Griffin #send-container{
-  background-color: rgba(154,4,23,0.7);
+.Griffin #send-container {
+  background-color: rgba(154, 4, 23, 0.7);
 }
 
-.Griffin input{
-  color: rgb(229,167,44);
+.Griffin input {
+  color: rgb(229, 167, 44);
 }
 
-.Griffin input::placeholder{
+.Griffin input::placeholder {
   color: rgb(144, 123, 83);
 }
 
-.Griffin .button{
-  background-color: rgb(154,4,23);
-  box-shadow: 2px 2px 2px rgb(229,167,44);
+.Griffin .button {
+  background-color: rgb(154, 4, 23);
+  box-shadow: 2px 2px 2px rgb(229, 167, 44);
 }
 
-.Griffin .arrow-down, .Griffin .arrow-up{
-  border-left: solid 25px rgb(229,167,44);
+.Griffin .arrow-down,
+.Griffin .arrow-up {
+  border-left: solid 25px rgb(229, 167, 44);
 }
 
 /* ------------------------------- SlytherinColorScheme ------------------------------- */
 
-.Sly .house-info{
-  background-color: rgba(60,115,63, 0.9);
+.Sly .house-info {
+  background-color: rgba(60, 115, 63, 0.9);
   border: solid transparent;
   border-width: 0px 0.3px 0px 0px;
-  border-color: transparent rgb(216,218,217);
+  border-color: transparent rgb(216, 218, 217);
 }
 
-.Sly .housename{
+.Sly .housename {
   /* background-color: rgba(147, 29, 0, 0.7); */
-  border-color: transparent rgb(216,218,217);
+  border-color: transparent rgb(216, 218, 217);
 }
 
-.Sly a{
-  background-color: rgb(216,218,217);
+.Sly a {
+  background-color: rgb(216, 218, 217);
 }
 
-.Sly a:hover, .Sly a:active{
-  color: rgba(60,115,63, 0.9);
+.Sly a:hover,
+.Sly a:active {
+  color: rgba(60, 115, 63, 0.9);
 }
 
-.Sly .chatbox{
-  background-image: url('/image/1301378.jpg');
+.Sly .chatbox {
+  background-image: url("/image/1301378.jpg");
 }
 
-.Sly .left{
-  background-color: rgb(34,80,37);
+.Sly .left {
+  background-color: rgb(34, 80, 37);
   color: rgb(236, 236, 233);
 }
 
@@ -135,8 +139,8 @@ body::-webkit-scrollbar{
   border-left: 5px solid gold;
 } */
 
-.Sly .right{
-  background-color: rgba(165,223,139,0.85);
+.Sly .right {
+  background-color: rgba(165, 223, 139, 0.85);
 }
 
 /* .Sly .right::before{
@@ -148,53 +152,54 @@ body::-webkit-scrollbar{
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
-.Sly #send-container{
-  background-color: rgba(28,60,36, 0.9);
+.Sly #send-container {
+  background-color: rgba(28, 60, 36, 0.9);
 }
 
-.Sly input{
+.Sly input {
   color: rgb(216, 218, 217);
 }
 
-.Sly input::placeholder{
-  color: rgb(153,153,153);
+.Sly input::placeholder {
+  color: rgb(153, 153, 153);
 }
 
-.Sly .button{
-  background-color: rgb(28,60,36);
-  box-shadow: 2px 2px 2px rgb(216,218,217);
+.Sly .button {
+  background-color: rgb(28, 60, 36);
+  box-shadow: 2px 2px 2px rgb(216, 218, 217);
 }
 
-.Sly .arrow-down, .Sly .arrow-up{
-  border-left: solid 25px rgb(216,218,217);
+.Sly .arrow-down,
+.Sly .arrow-up {
+  border-left: solid 25px rgb(216, 218, 217);
 }
-
 
 /* ------------------------------- RavenclawColorScheme ------------------------------- */
 
-.Raven .house-info{
+.Raven .house-info {
   background-color: rgb(0, 64, 128);
   border-right: 0.3px solid rgb(153, 153, 153);
 }
 
-.Raven .housename{
+.Raven .housename {
   /* background-color: rgba(147, 29, 0, 0.7); */
-  border-color: transparent rgb(153,153,153);
+  border-color: transparent rgb(153, 153, 153);
 }
 
-.Raven a{
-  background-color: rgb(153,153,153);
+.Raven a {
+  background-color: rgb(153, 153, 153);
 }
 
-.Raven a:hover, .Raven a:active{
+.Raven a:hover,
+.Raven a:active {
   color: rgb(0, 64, 128);
 }
 
-.Raven .chatbox{
-  background-image: url('/image/1301377.jpg');
+.Raven .chatbox {
+  background-image: url("/image/1301377.jpg");
 }
 
-.Raven .left{
+.Raven .left {
   background-color: rgb(0, 64, 128);
   color: rgb(217, 217, 217);
 }
@@ -208,8 +213,8 @@ body::-webkit-scrollbar{
   border-left: 5px solid gold;
 } */
 
-.Raven .right{
-  background-color: rgba(217, 217, 217,0.85);
+.Raven .right {
+  background-color: rgba(217, 217, 217, 0.85);
 }
 
 /* .Raven .right::before{
@@ -221,53 +226,55 @@ body::-webkit-scrollbar{
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
-.Raven #send-container{
-  background-color: rgba(0,64,128, 0.9);
+.Raven #send-container {
+  background-color: rgba(0, 64, 128, 0.9);
 }
 
-.Raven input{
+.Raven input {
   color: rgb(217, 217, 217);
 }
 
-.Raven input::placeholder{
-  color: rgb(153,153,153);
+.Raven input::placeholder {
+  color: rgb(153, 153, 153);
 }
 
-.Raven .button{
+.Raven .button {
   background-color: rgb(0, 64, 128);
   box-shadow: 2px 2px 2px rgb(217, 217, 217);
 }
 
-.Raven .arrow-down,.Raven .arrow-up{
+.Raven .arrow-down,
+.Raven .arrow-up {
   border-left: solid 25px rgb(217, 217, 217);
 }
 
 /* ------------------------------- HufflepufColorScheme ------------------------------- */
 
-.Huff .house-info{
+.Huff .house-info {
   background-color: rgba(244, 236, 7, 0.9);
   border-right: 0.3px solid black;
 }
 
-.Huff .housename{
+.Huff .housename {
   /* background-color: rgba(147, 29, 0, 0.7); */
-  border-color: transparent rgb(157,125,9);
+  border-color: transparent rgb(157, 125, 9);
 }
 
-.Huff a{
-  background-color: rgb(157,125,9);
+.Huff a {
+  background-color: rgb(157, 125, 9);
 }
 
-.Huff a:hover, .Huff a:active{
+.Huff a:hover,
+.Huff a:active {
   color: rgb(69, 15, 1);
 }
 
-.Huff .chatbox{
-  background-image: url('/image/1301376.jpg');
+.Huff .chatbox {
+  background-image: url("/image/1301376.jpg");
 }
 
-.Huff .left{
-  background-color: rgba(94,27,10,1);
+.Huff .left {
+  background-color: rgba(94, 27, 10, 1);
   color: rgb(243, 236, 141);
 }
 
@@ -280,8 +287,8 @@ body::-webkit-scrollbar{
   border-left: 5px solid gold;
 } */
 
-.Huff .right{
-  background-color: rgba(244, 236, 7,0.85);
+.Huff .right {
+  background-color: rgba(244, 236, 7, 0.85);
 }
 
 /* .Huff .right::before{
@@ -293,24 +300,25 @@ body::-webkit-scrollbar{
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
-.Huff #send-container{
-  background-color: rgba(244, 236, 7,0.7);
+.Huff #send-container {
+  background-color: rgba(244, 236, 7, 0.7);
 }
 
-.Huff .button{
+.Huff .button {
   background-color: rgb(244, 236, 7);
   box-shadow: 2px 2px 2px;
 }
 
-.Huff input{
-  color: rgb(94,27,10);
+.Huff input {
+  color: rgb(94, 27, 10);
 }
 
-.Huff input::placeholder{
+.Huff input::placeholder {
   color: rgb(94, 72, 66);
 }
 
-.Huff .arrow-down, .Huff .arrow-up{
+.Huff .arrow-down,
+.Huff .arrow-up {
   border-left: solid 25px black;
 }
 
@@ -322,7 +330,7 @@ body::-webkit-scrollbar{
   justify-content: center;
 }
 
-h2{
+h2 {
   font-family: MagicSchool;
   font-size: 50px;
   font-weight: 400;
@@ -338,7 +346,7 @@ h2{
   border-width: 0px 5px;
 }
 
-.namelist{
+.namelist {
   position: absolute;
   text-align: center;
   top: 17.5vh;
@@ -348,11 +356,11 @@ h2{
   scroll-behavior: smooth;
 }
 
-.name{
+.name {
   font-family: Aver;
 }
 
-a{
+a {
   position: absolute;
   display: block;
   margin: 0px;
@@ -366,7 +374,8 @@ a{
   font-size: 38px;
 }
 
-a:link, a:visited{
+a:link,
+a:visited {
   color: black;
 }
 
@@ -431,9 +440,12 @@ a:link, a:visited{
   clear: both;
 }
 
+/* .center {
+} */
+
 /* ------------------------------------- TextArea ------------------------------------- */
 
-#send-container{
+#send-container {
   position: absolute;
   width: 75%;
   height: 54px;
@@ -459,7 +471,7 @@ a:link, a:visited{
 
 /* --------------------------------------- Send Button --------------------------------------- */
 
-.button{
+.button {
   position: fixed;
   bottom: 11px;
   right: 1vw;
@@ -471,19 +483,19 @@ a:link, a:visited{
   border: none;
 }
 
-.button:active{
+.button:active {
   transition: 100ms;
   box-shadow: none;
 }
 
-.arrow-up{
+.arrow-up {
   width: 0px;
   height: 0px;
   border-top: solid 12.5px transparent;
   border-bottom-left-radius: 10px;
 }
 
-.arrow-down{
+.arrow-down {
   margin-top: 2px;
   width: 0px;
   height: 0px;
@@ -493,12 +505,12 @@ a:link, a:visited{
 
 /* ------------------------------------- FontStyles ------------------------------------- */
 
-@font-face{
+@font-face {
   font-family: MagicSchool;
-  src: url('/fonts/magic-school.one.ttf') format('truetype');
+  src: url("/fonts/magic-school.one.ttf") format("truetype");
 }
 
 @font-face {
   font-family: Aver;
-  src: url('/fonts/Aver-opKo.ttf') format('truetype');
+  src: url("/fonts/Aver-opKo.ttf") format("truetype");
 }
