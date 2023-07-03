@@ -90,6 +90,11 @@ body::-webkit-scrollbar {
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
+.Griffin .center{
+  border: 0.5px solid rgb(158, 29, 41);
+  background-color: rgba(229, 167, 44, 0.75);
+}
+
 .Griffin .container::-webkit-scrollbar-thumb{
   border-radius: 2.5px;
   background: rgb(180, 131, 33);
@@ -171,6 +176,11 @@ body::-webkit-scrollbar {
 /*.Sly .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
+
+.Sly .center{
+  border: 0.5px solid rgb(46, 111, 51);
+  background-color: rgba(200, 199, 199, 0.85);
+}
 
 .Sly .container::-webkit-scrollbar-thumb{
   border-radius: 2.5px;
@@ -260,11 +270,15 @@ body::-webkit-scrollbar {
   border-left: 5px solid rgb(251, 108, 31);
 } */
 
+.Raven .center{
+  border: 0.5px solid rgb(0, 94, 187);
+  background-color: rgba(217, 217, 217, 0.75);
+}
+
 .Raven .container::-webkit-scrollbar-thumb{
   border-radius: 2.5px;
   background: rgb(0, 119, 238);
 }
-
 
 .Raven #send-container {
   background-color: rgba(0, 64, 128, 0.9);
@@ -340,6 +354,11 @@ body::-webkit-scrollbar {
 /*.Huff .right::after{
   border-left: 5px solid rgb(251, 108, 31);
 } */
+
+.Huff .center{
+  border: 0.5px solid black;
+  background-color: rgba(244, 236, 7, 0.75);
+}
 
 .Huff .container::-webkit-scrollbar-thumb{
   border-radius: 2.5px;
@@ -510,8 +529,13 @@ a:visited {
   clear: both;
 }
 
-/* .center {
-} */
+.center {
+  position: relative;
+  right: -37.5%;
+  clear: both;
+  padding: 2.5px;
+  border-radius: 2.5px;
+}
 
 /* ------------------------------------- TextArea ------------------------------------- */
 

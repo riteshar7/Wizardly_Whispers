@@ -53,6 +53,9 @@ app.get('/login',(req, res) => {
 })
 
 app.get('/:id', async(req, res) => {
+    if(req.params.id === "favicon.ico"){
+        return res.status(404);
+    }
     await UserLogin.findById(req.params.id)
             .then((result) => {
                 UserLogin.find({house: result.house},{_id:0,name:1})
