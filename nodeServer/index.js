@@ -5,6 +5,7 @@
 const express = require('express');
 const UserLogin = require('./models/userModel');
 const Chats = require('./models/chatModel');
+const { addUserValidation } = require('./validation/users/user.validation');
 
 const app = express();
 
@@ -31,14 +32,14 @@ io.on('connection', (socket) => {
         console.log(rooms);
         socket.broadcast.to(room).emit('user-joined', name);
     });
-    socket.on('send', (username, message, room) => {
+    socket.on('send', async (username, message, room) => {
         socket.broadcast.to(room).emit('receive', {message: message, name: rooms[room].users[socket.id]});
         const housechat = {
             name: username,
             message: message,
             house: room,
         };
-        Chats.insertMany([housechat])
+        await Chats.insertMany([housechat])
             .then((result) => {
                 console.log(result);
             })
@@ -68,12 +69,12 @@ app.get('/:id', async(req, res) => {
         return res.status(404);
     }
     await UserLogin.findById(req.params.id)
-            .then((result) => {
-                UserLogin.find({house: result.house},{_id:0,name:1})
-                    .then((ch) => {
-                        Chats.find({house: result.house},{_id:0,name:1,message:1}).sort({_id:1})
+            .then(async (result) => {
+                await UserLogin.find({house: result.house},{_id:0,name:1})
+                    .then(async (ch) => {
+                        await Chats.find({house: result.house},{_id:0,name:1,message:1}).sort({_id:1})
                         .then((chat) => {
-                            console.log(chat);
+                            // console.log(chat);
                             res.render('index',{user: result, userhouse: ch, chats: chat});
                         })
                         .catch(err => console.log(err));
@@ -85,7 +86,7 @@ app.get('/:id', async(req, res) => {
             });
 })
 
-app.post('/signup', async(req, res) => {
+app.post('/signup',addUserValidation, async(req, res) => {
     // const data = {
     //     name: req.body.name,
     //     password: req.body.password
