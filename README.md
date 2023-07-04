@@ -14,7 +14,6 @@ This project is a real-time chat application based on the group discussions that
 - **Responsive Design:** The website is fully responsive and adapts to different screen sizes and devices.
 
 ![Login Page](images/Login-page.png)
-![Phone view of the app](images/phone-view.png)
 
 ## Installation
 
