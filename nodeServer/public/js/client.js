@@ -4,6 +4,10 @@ const form = document.getElementById('send-container');
 const messageInput = document.getElementById('messageInp');
 const messageContainer = document.querySelector('.container');
 const userList = document.querySelector('.namelist');
+const popup = document.querySelector('.popup');
+const houseinfo = document.querySelector('.house-info');
+const chatbox = document.querySelector('.chatbox');
+const send = document.querySelector('.button');
 
 const append = (message, position) => {
     const messageElement = document.createElement('div');
@@ -39,3 +43,9 @@ socket.on('receive', (data) => {
 socket.on('leave', name => {
     append(`${name} left the chat`,'left');
 });
+
+popup.onclick = function(){
+    houseinfo.classList.toggle("show");
+    chatbox.classList.toggle("hide");
+    send.classList.toggle("hide");
+}

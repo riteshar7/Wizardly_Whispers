@@ -504,6 +504,29 @@ a:visited {
   color: black;
 }
 
+.popup{
+  /* background-color: black; */
+  position: absolute;
+  top: 5px;
+  left: 7.5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: transparent;
+  border: 0px solid transparent;
+  width: 0px;
+  height: 0px;
+  cursor: default;
+}
+
+.line1, .line2, .line3{
+  position: relative;
+  left: -5px;
+  width: 12px;
+  height: 2px;
+  margin: 1px;
+}
+
 /* ------------------------------------- ChatArea ------------------------------------- */
 
 .chatbox {
@@ -666,4 +689,68 @@ a:visited {
 @font-face {
   font-family: Aver;
   src: url("/fonts/Aver-opKo.ttf") format("truetype");
+}
+
+/* ------------------------------------- Responsive ------------------------------------- */
+
+@media screen and (max-width: 600px){
+
+  .house-info{
+    min-width: 20px;
+    max-width: 30px;
+    transition: 250ms ease-in-out;
+  }
+
+  .show{
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .hide{
+    max-width: 0px;
+    max-height: 0px;
+  }
+
+  h2, h3, .housename, .namelist, a{
+    visibility: hidden;
+  }
+
+  .show h2, .show h3, .show .namelist, .show a{
+    visibility: visible;
+    width: 100%;
+    text-align: center;
+  }
+
+  .show .housename{
+    visibility: visible;
+    width: fit-content;
+    text-align: center;
+  }
+
+  .popup{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+  }
+
+  .chatbox, #send-container{
+    width: -webkit-fill-available;
+  }
+
+  .Griffin .line1, .Griffin .line2, .Griffin .line3{
+    background-color: rgb(255, 205, 0);
+  }
+
+  .Sly .line1, .Sly .line2, .Sly .line3{
+    background-color: rgb(216, 218, 217);
+  }
+
+  .Raven .line1, .Raven .line2, .Raven .line3{
+    background-color: rgb(218, 215, 215);
+  }
+
+  .Huff .line1, .Huff .line2, .Huff .line3{
+    background-color: black;
+  }
 }
