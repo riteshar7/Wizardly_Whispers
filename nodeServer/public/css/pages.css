@@ -153,6 +153,7 @@ button:active {
     top: 15vh;
     left: 0px;
     width: 100%;
+    background-color: rgba(224, 215, 186, 0.43);
   }
 
   button,
@@ -162,6 +163,11 @@ button:active {
 
   .details select {
     width: 91%;
+  }
+
+  a:link,
+  a:visited {
+    color: rgb(85, 63, 35);
   }
 }
 
